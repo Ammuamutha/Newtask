@@ -1,0 +1,13 @@
+body {
+    background-color: antiquewhite;
+}
+#clock{
+    margin: auto;
+    border-radius: 8px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    position: absolute;
+    padding: 20px;
+    left: 50%;
+}
