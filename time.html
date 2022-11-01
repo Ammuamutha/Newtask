@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="time.css">
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script>
-        $(function showtime() {
-            var dt = new Date();
-            var hrs = dt.getHours();
-            var mins = dt.getMinutes();
-            var sec = dt.getSeconds();
-            var session = "AM";
-            if(hrs>12) {
-                session = "PM";
-            }
-            var time = hrs + ":" + mins + ":" + sec + "" + session;
-            $("#clock").html(time);
-        });
-        $(document).ready(function () {
-            setInterval(function() {
-         alert('Next alert in 30 secs'); }, 5000); //5 seconds
-});
-        // $("#clock").load("time.html");
-
-    </script>
+         $(document).ready(function() {
+            function showtime() {
+                const dt = new Date();
+                let hrs = dt.getHours();
+                let mins = dt.getMinutes();
+                let sec = dt.getSeconds();
+                let session = "AM";
+                if(hrs>12) {
+                    session = "PM";
+                }
+                let time = hrs + ":" + mins + ":" + sec + "" + session;
+                    $("#clock").html(time);
+                };
+                showtime();
+                setInterval(showtime, 1000);
+            });
+            
+        </script>
 </head>
 <body>
     <div id="clock"></div>
